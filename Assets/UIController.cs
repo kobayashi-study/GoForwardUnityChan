@@ -38,4 +38,8 @@ public class UIController : MonoBehaviour
         this.isGameOver = true;
     }
 
+    public bool GetIsGameOver()
+    {
+        return isGameOver;
+    }
 }

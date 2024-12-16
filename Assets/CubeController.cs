@@ -25,8 +25,11 @@ public class CubeController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other)
     {
         AudioSource audio = GetComponent<AudioSource>();
+        UIController gameOver = GameObject.Find("Canvas").GetComponent<UIController>();
         if (other.gameObject.tag == "CubeTag" || other.gameObject.tag == "GroundTag") {
-            audio.Play();
-        }
+            if (!gameOver.GetIsGameOver()) {
+                audio.Play();
+            }
+        } 
     }
 }
