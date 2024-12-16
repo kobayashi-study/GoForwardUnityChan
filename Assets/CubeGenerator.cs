@@ -34,5 +34,4 @@ public class CubeGenerator : MonoBehaviour
             this.span = this.offsetX + this.spaceX * n;
         }
     }
-
 }
